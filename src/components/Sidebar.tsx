@@ -7,7 +7,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="logo">
-        PAGI <span>SORE</span>
+        Match<span>.</span>
       </div>
 
       <nav className="nav">

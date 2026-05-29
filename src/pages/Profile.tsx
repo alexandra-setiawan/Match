@@ -1,5 +1,30 @@
 import Sidebar from "../components/Sidebar";
 
+// -- Data -- //
+const heroStats = [
+  { label: "Sessions Played", value: "42" },
+  { label: "Win Rate", value: "68%" },
+  { label: "Matches", value: "156" },
+];
+
+const statGrid = [
+  { label: "Win Rate", value: "68%" },
+  { label: "Games Won", value: "156" },
+  { label: "Games Lost", value: "73" },
+  { label: "Avg. Score", value: "6.2", unit: "per game" },
+];
+
+// -- Sub-components -- //
+function SectionHead({ title, action } : {title: string, action: string}) {
+  return (
+    <div className="section-head">
+      <h2>{title}</h2>
+      <button>{action}</button>
+    </div>
+  );
+}
+
+// -- Page -- //
 function Profile() {
   return (
     <main className="layout">
@@ -24,17 +49,16 @@ function Profile() {
           </div>
 
           <div className="profile-stats">
-            <div><strong>42</strong><p>Sessions Played</p></div>
-            <div><strong>68%</strong><p>Win Rate</p></div>
-            <div><strong>156</strong><p>Matches</p></div>
+            {heroStats.map(({label, value}) => (
+              <div key={label}>
+                <strong>{value}</strong>
+                <p>{label}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <div className="section-head">
-          <h2>Upcoming Session</h2>
-          <a>View all</a>
-        </div>
-
+        <SectionHead title="Upcoming Session" action="View all" />
         <section className="upcoming">
           <div className="date-box">
             <small>SAT</small>
@@ -51,9 +75,7 @@ function Profile() {
               <p>Amanda Wijaya</p>
               <p>Dedi Kurniawan</p>
             </div>
-
             <strong>VS</strong>
-
             <div>
               <small>TEAM B</small>
               <p>Tasya Amanda</p>
@@ -62,16 +84,17 @@ function Profile() {
           </div>
         </section>
 
-        <div className="section-head">
-          <h2>Statistics Overview</h2>
-          <a>View details</a>
-        </div>
-
+        <SectionHead title="Statistics Overview" action="View details" />
         <section className="stat-grid">
-          <div><p>Win Rate</p><strong>68%</strong><span /></div>
-          <div><p>Games Won</p><strong>156</strong><span /></div>
-          <div><p>Games Lost</p><strong>73</strong><span /></div>
-          <div><p>Avg. Score</p><strong>6.2 <small>per game</small></strong></div>
+          {statGrid.map(({label, value, unit}) => (
+            <div key={label}>
+              <p>{label}</p>
+              <strong>
+                {value} {unit && <small>{unit}</small>}
+              </strong>
+              <span />
+            </div>
+          ))}
         </section>
       </section>
     </main>

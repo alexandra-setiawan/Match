@@ -17,6 +17,8 @@ import {
   Shuffle,
 } from "lucide-react";
 
+
+
 const sports = [
   {
     name: "Tennis",
@@ -173,7 +175,7 @@ function GenerateMatches() {
 
                 <h2>RULES & SETTINGS</h2>
 
-                <div className="form-grid">
+                <div className="format-grid">
                   <label>
                     Session Name
                     <input defaultValue="Sunday Morning Doubles" />
