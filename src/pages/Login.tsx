@@ -23,7 +23,7 @@ function Login() {
   return (
     <main style={styles.screen}>
       <Link to="/" style={styles.logo}>
-        PAGI <span style={styles.lime}>SORE</span>
+        Match<span style={styles.lime}>.</span>
       </Link>
 
       <section style={styles.card}>
@@ -84,7 +84,7 @@ function Login() {
         </Link>
       </section>
 
-      <Link to="/" style={styles.backHome}>
+      <Link to="/home" style={styles.backHome}>
         Back to home
       </Link>
     </main>
@@ -226,7 +226,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   backHome: {
     position: "absolute",
-    bottom: 42,
+    bottom: 20,
     color: "#c7e34f",
     fontWeight: 900,
   },

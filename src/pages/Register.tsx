@@ -36,7 +36,7 @@ function Register() {
   return (
     <main style={styles.screen}>
       <Link to="/" style={styles.logo}>
-        PAGI <span style={styles.lime}>SORE</span>
+        Match<span style={styles.lime}>.</span>
       </Link>
 
       <section style={styles.card}>
@@ -93,12 +93,18 @@ function Register() {
           Create account →
         </button>
 
+        <div style={styles.divider}>
+          <span style={styles.line}></span>
+          <p style={styles.or}>or</p>
+          <span style={styles.line}></span>
+        </div>
+
         <Link to="/login" style={styles.secondaryWithMargin}>
           Log in instead
         </Link>
       </section>
 
-      <Link to="/" style={styles.backHome}>
+      <Link to="/home" style={styles.backHome}>
         Back to home
       </Link>
     </main>
@@ -192,6 +198,21 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: 30,
     cursor: "pointer",
   },
+  divider: {
+    display: "grid",
+    gridTemplateColumns: "1fr auto 1fr",
+    alignItems: "center",
+    gap: 18,
+    margin: "24px 0",
+  },
+  line: {
+    height: 1,
+    background: "rgba(23,32,51,0.18)",
+  },
+  or: {
+    margin: 0,
+    color: "rgba(23,32,51,0.55)",
+  },
   secondaryWithMargin: {
     width: "100%",
     height: 58,
@@ -208,7 +229,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   backHome: {
     position: "absolute",
-    bottom: 42,
+    bottom: 20,
     color: "#c7e34f",
     fontWeight: 900,
   },

@@ -58,32 +58,6 @@ function Profile() {
           </div>
         </section>
 
-        <SectionHead title="Upcoming Session" action="View all" />
-        <section className="upcoming">
-          <div className="date-box">
-            <small>SAT</small>
-            <strong>24</strong>
-            <small>MAY</small>
-            <p>7:00 PM – 9:00 PM</p>
-            <p>Pagi Sore Tennis Club</p>
-            <em>Doubles</em>
-          </div>
-
-          <div className="versus">
-            <div>
-              <small>TEAM A</small>
-              <p>Amanda Wijaya</p>
-              <p>Dedi Kurniawan</p>
-            </div>
-            <strong>VS</strong>
-            <div>
-              <small>TEAM B</small>
-              <p>Tasya Amanda</p>
-              <p>Martina Setiawan</p>
-            </div>
-          </div>
-        </section>
-
         <SectionHead title="Statistics Overview" action="View details" />
         <section className="stat-grid">
           {statGrid.map(({label, value, unit}) => (
