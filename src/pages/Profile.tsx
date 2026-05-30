@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 
 // -- Data -- //
@@ -39,7 +40,9 @@ function Profile() {
           <div className="profile-info">
             <div className="name-row">
               <h2>Amanda Wijaya</h2>
-              <button>Edit Profile</button>
+              <Link to="/edit-profile">
+                <button>Edit Profile</button>
+              </Link>
             </div>
 
             <span>Intermediate Player</span>
